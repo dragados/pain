@@ -112,7 +112,7 @@ public class Client extends Application{
 			loginID = username;
 			new buddyList();
 			Connection conn = null;
-			conn = DriverManager.getConnection("jdbc:mysql://162.217.176.77:6275/pain");
+			//conn = DriverManager.getConnection("jdbc:mysql://162.217.176.77:6275/pain");
 			return false;
 		}
 	}
@@ -125,7 +125,7 @@ public class Client extends Application{
 			BufferedReader in = null;
 
 			try {
-				link = new Socket(InetAddress.getByName("162.217.176.77"),20000);
+				link = new Socket(InetAddress.getLocalHost(),20000);
 			} catch (UnknownHostException e) {
 				System.out.println("oh dear, this is bad. UnknownHostException!");
 				System.exit(1);
